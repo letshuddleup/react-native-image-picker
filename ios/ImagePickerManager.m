@@ -346,8 +346,9 @@ RCT_EXPORT_METHOD(showImagePicker:(NSDictionary *)options callback:(RCTResponseS
                 }];
                 return;
             }
-
-            image = [self fixOrientation:image];  // Rotate the image for upload to web
+            
+            // Disabled: Doesn't seem to actually do anything valuable
+            // image = [self fixOrientation:image];  // Rotate the image for upload to web
 
             // If needed, downscale image
             float maxWidth = image.size.width;
